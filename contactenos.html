@@ -1,30 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <title>Contáctenos</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBU0gyyTbJbpBI3lfXzAUtFpWCRpYozZ2Y">
 
-    </script>
     <link rel="stylesheet" href="css/mapstyle.css">
-    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Document</title>
+
+
 </head>
 
 <body>
+    <!--
+    
+    <div class="card border-dark mb-3 container " style="max-width: 18rem;">
+        <div class="card-header">Nuestros puntos de venta</div>
+        <div class="card-body text-dark">
 
-    <div id="map">
-
-
+            <h5 class="card-title">¿Qué tan cerca estas?</h5>
+            <div id="map"></div>
+            <p class="card-text">Aqui podrás encontrar cuáles son los puntos de venta más cercanos a tu ubicación
+                catual.</p>
+        </div>
     </div>
+    -->
+   
+    <div class="container-fluid" >
+        <div class="flex-row align-items-start">
+          <div class="col-12 d-flex justify-content-center">
+            Nuestro puntos de venta
+          </div>
+          <div class="flex-row " >
+            <div  class="col-12 " >
+                <div id="map"  ></div>
+            </div>
+            
+          </div>
+        </div>
+
+
+
 
     <script src="js/apiMaps.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBU0gyyTbJbpBI3lfXzAUtFpWCRpYozZ2Y&callback=initMap">
+        </script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>
