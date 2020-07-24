@@ -5,7 +5,7 @@
     <title>Contáctenos</title>
  
     <link rel="stylesheet" href="css/mapstyle.css">
-    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,15 +15,21 @@
 
 <body>
 
-    <div id="map">
+    <div class="card border-dark mb-3" style="max-width: 18rem;">
+        <div class="card-header">Nuestros puntos de venta</div>
+        <div class="card-body text-dark" >
 
-
-    </div>
+          <h5 class="card-title">¿Qué tan cerca estas?</h5>
+          <div id="map"></div>
+          <p class="card-text">Aqui podrás encontrar cuáles son los puntos de venta más cercanos a tu ubicación catual.</p>
+        </div>
+      </div>
 
     <script src="js/apiMaps.js"></script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBU0gyyTbJbpBI3lfXzAUtFpWCRpYozZ2Y&callback=initMap">
     </script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>
