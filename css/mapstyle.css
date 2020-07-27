@@ -1,14 +1,45 @@
 
   #map {
         padding: 100px;
-        height: 400px;
-        width: 800px;
-        align-content: center;
+        height: 100%;
+        width: auto;  
+        
   }
   html, body {
     height: 100%;
-    margin: o;
-    padding: 0;
-    align-content: center;
+    
+    padding: 0;   
     
   }
+  
+ 
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) { 
+    div.ubicacion {
+        padding: 100px;
+        height: 10px;
+        width: 200px;
+    }
+ }
+
+/* Small devices (landscape phones, less than 768px)*/
+@media (max-width: 767.98px) { 
+    div.ubicacion {
+        width: 10px;
+    }
+ }
+
+/* Medium devices (tablets, less than 992px)*/
+@media (max-width: 991.98px) { 
+    div.ubicacion {
+        width: 10px;
+    }
+ }
+
+/* Large devices (desktops, less than 1200px)*/
+@media (max-width: 1199.98px) { 
+    div.ubicacion {
+        width: 10;
+    }
+ }
+

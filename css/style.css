@@ -13,47 +13,14 @@ body{                                   /*tipo de letra body*/
 
 a{
     color:#f40009;
-    text-decoration: none ;
-}
-
-header{
-
-    background-color:black ;
-    padding-top: 15px;
-    padding-bottom: 15px;
-
-}
-
-    header .container{                    /*el container al dar un espacio no es una 
-                                clase del header quiere decir que lo contiene*/
-
-    display: flex;
-    justify-content:space-between ;
-    align-items: center;
-    flex-wrap: wrap;
-
-}
-
-header .container .logo{
-    width: 100px;
-    height: auto;
-
+    text-decoration: none;
+    text-align: center;
+    margin: 0 auto ;
 }
 
 
-header .container .hambur{          /* para pantallas mas pequeñas*/
 
-    display: none;
-
-}
-
-
-header .container nav a{        /* para el encabezado dar espacio entre los titulos */
-
-    margin-right: 15px;
-    margin-left: 15px;
-
-}
+   
 
 
 .boton{                             /*botnes de color */
@@ -64,6 +31,8 @@ header .container nav a{        /* para el encabezado dar espacio entre los titu
 .boton.boton-blanco{
     background-color:red ;
     color:#ffffff
+    
+   
 }
 
 .boton.boton-rojo{
@@ -106,49 +75,17 @@ header .container nav a{        /* para el encabezado dar espacio entre los titu
     width: 33.33%;
 }
 
+
+
 .seccion{
     padding-top: 30px;
     margin-bottom: 18px;
 }
 
-#inicio{
-
+.cuadrado-perfecto{
     position: relative;
-    background-color: #1e1e1e;
-    display: block;
-
-}
-
-#inicio img{ /* imagen de fondo con opacidad*/
     width: 100%;
-    opacity: 0.5;
-  
-}
-
-
-#inicio .bloquer-banner{
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    width: 33%;
-    text-align: center;
-    margin-left: -16%;
-    color: #ffffff;
-
-  
-}
-
-#inicio .bloquer-banner h1{ 
-    font-size: 40px;
-    margin-top: 0;
-    margin-bottom: 15px;
-}
-
-#nosotros{                          /*  imagen de fondo en caja con degrade*/
-    background-image: linear-gradient(to left,rgb(30, 30,30,0.7),red),url('../img/latas.jpg');
-    color:white;
-    font-size: 25px;
-    text-align: center;
+    padding-bottom: 100%;
 }
 
 
@@ -189,5 +126,15 @@ header .container nav a{        /* para el encabezado dar espacio entre los titu
 {
    
     margin-top: 0;
+
+}
+#servicios .cuadrado-perfecto img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    opacity: .9;
 
 }
