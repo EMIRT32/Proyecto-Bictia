@@ -30,15 +30,19 @@
     </div>
     <!--Formulario de contactenos-->
 
-    <div class="container">
+    <div class="container" id="app">
         <form class="needs-validation" novalidate>
             <div class="form-row">
                 <div class="col-md-6 mb-3">
                     <label for="validationCustom01">Nombres</label>
-                    <input type="text" class="form-control" id="validationCustom01" placeholder="Nombres" required>
+                    <input type="text" class="form-control" id="validationCustom01" placeholder="Nombres" v-model="from_name" required>
                     <div class="valid-feedback">
                         Campo diligenciado.
                     </div>
+                    <div class="invalid-feedback">
+                        Ingresa el nombre.
+                    </div>
+                   
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="validationCustom02">Apellidos</label>
@@ -46,18 +50,48 @@
                     <div class="valid-feedback">
                         Campo diligenciado.
                     </div>
+                    <div class="invalid-feedback">
+                        Ingresa el apellido.
+                    </div>
                 </div>
             </div>
             <div class="form-row">
                 <div class="col-md-6 mb-3">
-                    <label for="validationCustom03">Ciudad</label>
-                    <input type="text" class="form-control" id="validationCustom03" placeholder="Ciudad" required>
+                    <label for="validationCustom01">Correo</label>
+                    <input type="text" class="form-control" id="validationCustom03" placeholder="Ingrese su correo"  v-model="from_email" required>
+                    <div class="valid-feedback">
+                        Campo diligenciado.
+                    </div>
+                    <div class="invalid-feedback">
+                        Ingresa el correo.
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="validationCustom02">Asunto</label>
+                    <input type="text" class="form-control" id="validationCustom04" placeholder="Asunto del mensaje"  v-model="subject" required>
+                    <div class="valid-feedback">
+                        Campo diligenciado.
+                    </div>
+                    <div class="invalid-feedback">
+                        Ingresa el asunto.
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="validationCustom05">Ciudad</label>
+                    <input type="text" class="form-control" id="validationCustom05" placeholder="Ciudad" required>
                     <div class="invalid-feedback">
                         Ingresa el nombre de la ciudad de residencia.
                     </div>
+                    <div class="valid-feedback">
+                        Campo diligenciado.
+                    </div>
                 </div>
+                
+
                 <div class="col-md-3 mb-3">
-                    <label for="validationCustom04">Barrio</label>
+                    <label for="validationCustom06">Barrio</label>
                     <select class="custom-select" id="validationCustom04" required>
                         <option selected disabled value="">Selecciona el barrio...</option>
                         <option>...</option>
@@ -65,20 +99,29 @@
                     <div class="invalid-feedback">
                         Debe seleccionar un barrio para poder continuar.
                     </div>
+                    <div class="valid-feedback">
+                        Campo diligenciado.
+                    </div>
                 </div>
                 <div class="col-md-3 mb-3">
-                    <label for="validationCustom05">Teléfono</label>
+                    <label for="validationCustom07">Teléfono</label>
                     <input type="number" class="form-control" id="validationCustom05" required>
                     <div class="invalid-feedback">
                         Ingrese un teléfono de contacto.
                     </div>
+                    <div class="valid-feedback">
+                        Campo diligenciado.
+                    </div>
                 </div>
                 <div class="col-md-12 mb-3">
                     <label for="validationTextarea">Textarea</label>
-                    <textarea class="form-control" id="validationCustom06" placeholder="Deja tu mensaje aquí"
+                    <textarea class="form-control" id="validationCustom07" placeholder="Deja tu mensaje aquí" v-model="message"
                         required></textarea>
                     <div class="invalid-feedback">
                         Por favor deja tu mensaje, gracias...
+                    </div>
+                    <div class="valid-feedback">
+                        Campo diligenciado.
                     </div>
                 </div>
             </div>
@@ -95,7 +138,7 @@
                     </div>
                 </div>
             </div>
-            <button class="btn btn-primary" type="submit">Enviar</button>
+            <button @click="enviar" class="btn btn-success"class="btn btn-primary" type="submit" >Enviar</button>
             <!-- Modal -->
             <div class="modal fade" id="myModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
                 role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -192,6 +235,9 @@
         </form>
     </div>
     </div>
+    <!--envio de formulario a correo con el siguiente script-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+    <!---->
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/apiMaps.js"></script>
     <script async defer
