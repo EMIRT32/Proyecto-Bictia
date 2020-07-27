@@ -1,7 +1,3 @@
-.fondo{
-    background-image: url("../img/imagenfondo.jpg");
-    background-size: cover;
-}
 
 .navbar-nav{
     padding-left: 100px;
@@ -84,4 +80,12 @@
 
 .container{
     background-color: black;
+}
+
+.text-uppercase{
+    color: white;
+}
+
+.color{
+    color: white;
 }
