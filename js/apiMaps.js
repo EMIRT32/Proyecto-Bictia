@@ -132,17 +132,55 @@ const vue = new Vue({
   }
 });*/
 
-
-
-$.ajax({
-  url: "https://www.datos.gov.co/resource/xdk5-pm3f.json",
-  type: "GET",
-  data: {
-    "$limit" : 5000,
-    "$$app_token" : "0HLLaz2pxnN9qrQienvqxY1wp"
-  }
-}).done(function(data) {
-alert("Retrieved " + data.length + " records from the dataset!");
-console.log(data);
-
+$(document).ready(function(){
+    obtenerDepartamentos();
+    obtenerMunicipios();
 });
+
+
+function obtenerDepartamentos() {
+  $.ajax({
+    url: "https://www.datos.gov.co/resource/xdk5-pm3f.json",
+    type: "GET",
+    data: {
+      "$limit" : 5000,
+      "$$app_token" : "0HLLaz2pxnN9qrQienvqxY1wp"
+    }
+  }).done(function(data) {
+  const departamentos =data.map(element =>{
+    return element.departamento;
+  });
+  $("#departamentos").autocomplete({
+    source: departamentos
+  });
+  
+  
+  console.log(departamentos);
+  console.log(data);
+  
+  
+  });
+}
+function obtenerMunicipios() {
+  $.ajax({
+    url: "https://www.datos.gov.co/resource/xdk5-pm3f.json",
+    type: "GET",
+    data: {
+      "$limit" : 5000,
+      "$$app_token" : "0HLLaz2pxnN9qrQienvqxY1wp"
+    }
+  }).done(function(data) {
+  const municipios =data.map(element =>{
+    return element.municipio;
+  });
+  $("#municipios").autocomplete({
+    source: municipios
+  });
+  
+  
+  console.log(municipios);
+  
+  
+  });
+}
+
