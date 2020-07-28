@@ -74,9 +74,7 @@
     background-color: #000000;
 }
 
-.body{
-    color: white;
-}
+
 
 .container{
     background-color: black;
@@ -86,6 +84,26 @@
     color: white;
 }
 
-.color{
-    color: white;
+.texto{
+    color: #afafaf;
+}
+
+.bi-cart3{
+    color: black;
+}
+
+.col-md-8{
+    color: black;
+}
+
+.titulo{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.fondo{
+    background-image: url("..//img/logos/fondo.jpg");
+}
+
+.container-md{
+    background-color: white;
 }
