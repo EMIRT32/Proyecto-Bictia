@@ -150,13 +150,14 @@ function obtenerDepartamentos() {
   const departamentos =data.map(element =>{
     return element.departamento;
   });
+  const nDepartamentos = [...new Set(departamentos)];
   $("#departamentos").autocomplete({
-    source: departamentos
+    source: nDepartamentos
   });
   
   
   console.log(departamentos);
-  console.log(data);
+  console.log(nDepartamentos);
   
   
   });
@@ -173,6 +174,7 @@ function obtenerMunicipios() {
   const municipios =data.map(element =>{
     return element.municipio;
   });
+  
   $("#municipios").autocomplete({
     source: municipios
   });
