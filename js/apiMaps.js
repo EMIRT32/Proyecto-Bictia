@@ -1,19 +1,46 @@
 
-// Note: This example requires that you consent to location sharing when
-// prompted by your browser. If you see the error "The Geolocation service
-// failed.", it means you probably did not give permission for the browser to
-// locate you.
+// Para que funciona la geolocalizacion el usuario debe permitir que la página obtenga la ubicación
+// De lo contrario aparecerá un error en el mapa.
 var map, infoWindow, ub1, ub2, ub3;
 function initMap() {
 
 
   map = new google.maps.Map(document.getElementById('map'), {
     center: { lat: -34.397, lng: 150.644 },
-    zoom: 13
+    zoom: 12
   });
   infoWindow = new google.maps.InfoWindow;
 
-  // Try HTML5 geolocation.
+  coordenadas = [
+    {
+      lat:4.678565,
+      lng:-74.143951
+    },
+    {
+      lat:4.692594, 
+      lng:-74.098804
+    },
+    {
+      lat:4.687120, 
+      lng:-74.093825
+    },{
+      lat:4.644175, 
+      lng:-74.076488
+    }
+
+  ];
+  coordenadas.forEach(element => {
+    new google.maps.Marker({
+      position:{
+        lat: element.lat,
+        lng: element.lng
+      },
+      map:map
+    })
+    
+  });
+
+  // geolocalización.
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function (position) {
       var pos = {
@@ -104,14 +131,18 @@ const vue = new Vue({
     }
   }
 });*/
-(function(){
-  emailjs.init('user_fnVkaXo5VBJwdSA6NIas7');
-})();
-window.onload = function() {
-  document.getElementById('contact-form').addEventListener('submit', function(event) {
-      event.preventDefault();
-      // generate the contact number value
-      this.contact_number.value = Math.random() * 100000 | 0;
-      emailjs.sendForm('contact_service', 'contact_form', this);
-  });
-}
+
+
+
+$.ajax({
+  url: "https://www.datos.gov.co/resource/xdk5-pm3f.json",
+  type: "GET",
+  data: {
+    "$limit" : 5000,
+    "$$app_token" : "0HLLaz2pxnN9qrQienvqxY1wp"
+  }
+}).done(function(data) {
+alert("Retrieved " + data.length + " records from the dataset!");
+console.log(data);
+
+});

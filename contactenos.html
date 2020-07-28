@@ -30,12 +30,12 @@
     </div>
     <!--Formulario de contactenos-->
 
-    <div class="container" id="app">
+    <div class="container" id="contact-form">
         <form class="needs-validation" novalidate>
             <div class="form-row">
                 <div class="col-md-6 mb-3">
                     <label for="validationCustom01">Nombres</label>
-                    <input type="text" class="form-control" id="validationCustom01" placeholder="Nombres" v-model="from_name" required>
+                    <input type="text" class="form-control" id="validationCustom01" placeholder="Nombres" name="contact_number" required>
                     <div class="valid-feedback">
                         Campo diligenciado.
                     </div>
@@ -58,7 +58,7 @@
             <div class="form-row">
                 <div class="col-md-6 mb-3">
                     <label for="validationCustom01">Correo</label>
-                    <input type="text" class="form-control" id="validationCustom03" placeholder="Ingrese su correo"  v-model="from_email" required>
+                    <input type="email" class="form-control" id="validationCustom03" placeholder="Ingrese su correo"  name="user_name" required>
                     <div class="valid-feedback">
                         Campo diligenciado.
                     </div>
@@ -79,10 +79,10 @@
             </div>
             <div class="form-row">
                 <div class="col-md-6 mb-3">
-                    <label for="validationCustom05">Ciudad</label>
-                    <input type="text" class="form-control" id="validationCustom05" placeholder="Ciudad" required>
+                    <label for="validationCustom05">Departamento</label>
+                    <input type="text" class="form-control" id="validationCustom05" placeholder="Departamento" required>
                     <div class="invalid-feedback">
-                        Ingresa el nombre de la ciudad de residencia.
+                        Ingresa el nombre del departamento.
                     </div>
                     <div class="valid-feedback">
                         Campo diligenciado.
@@ -91,13 +91,10 @@
                 
 
                 <div class="col-md-3 mb-3">
-                    <label for="validationCustom06">Barrio</label>
-                    <select class="custom-select" id="validationCustom04" required>
-                        <option selected disabled value="">Selecciona el barrio...</option>
-                        <option>...</option>
-                    </select>
+                    <label for="validationCustom06">Ciudad</label>
+                    <input type="text" class="form-control" id="validationCustom05" placeholder="Ciudad" required>
                     <div class="invalid-feedback">
-                        Debe seleccionar un barrio para poder continuar.
+                        Debe seleccionar una ciudad para poder continuar.
                     </div>
                     <div class="valid-feedback">
                         Campo diligenciado.
