@@ -90,7 +90,7 @@
 }
 
 .texto{
-    color: #afafaf;
+    color: white !important; 
 }
 
 .bi-cart3{
@@ -106,11 +106,11 @@
 }
 
 .fondo{
-    background-image: url("..//img/logos/fondo.jpg");
+    background-color: rgb(243, 243, 243);
 }
 
 .container-md{
-    background-color: white;
+    background-color: rgb(243, 243, 243);
 }
 
 .container-fluid{
@@ -121,3 +121,12 @@
 .navbar{
     padding: .8rem 3rem;
 }
+
+.texto{
+    color: white;
+}
+
+.fondo-texto{
+    color: white;
+}
+.remove-all-styles { all: revert; }
