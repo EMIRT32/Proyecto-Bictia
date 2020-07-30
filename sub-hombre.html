@@ -19,9 +19,22 @@
 		<div class="container">
 
 		<br /><br />
-						<div align="center" class="cbp-vm-switcher cbp-vm-view-grid" >
-							<input type="text" name="search" id="search" placeholder="Busca Ropa" class="form-control" />
-						</div>
+						
+
+						
+							<div align="center">
+								<!-- TODO: Implementar onkeypress, onkeyup, onkeydown -->
+								<input type="text" class="form-control" id="nombre" />
+								<input type="button" class="btn btn-primary" value="Buscar" placeholder="Busca Ropa" onclick="buscar()" />
+							</div>
+							<div class="row" id="contenedor-productos">
+							</div>
+						
+
+						
+
+
+
 						<ul class="list-group" id="result"></ul>
 		<br />
 			
@@ -29,10 +42,10 @@
 			<div class="main">
 
                     <div id="hombre" class="cbp-vm-switcher cbp-vm-view-grid">
-
+								
 					<ul>
-						<li>
-							<a class="cbp-vm-image" href="#"><img src="img/camisa1.png"></a>
+						<li >
+							<a class="cbp-vm-image" href="#"><img src="img/camisa1.png" ></a>
 							<h3 class="cbp-vm-title">Silver beet</h3>
 							<div class="cbp-vm-price">$19.90</div>
 							<div class="cbp-vm-details">
@@ -140,9 +153,11 @@
 							<a class="cbp-vm-icon cbp-vm-add" href="#">Add to cart</a>
 						</li>
 					</ul>
+
+					
 				</div>
 			</div><!-- /main -->
-		</div><!-- /container -->
+	</div><!-- /container -->
 
 		<script src="js/jquery-3.5.1.min.js"></script>
 	
@@ -151,40 +166,41 @@
 </html>
 
 <script>
-    $(document).ready(function () {
 
-		//$.ajaxSetup({ cache: false });
-		
-        $('#search').keyup(function () { 
-			
-			//// Limpiar datos de tabla y de pagination
-            $('#result').html('');
-			$('#state').val('');
-			 // .val() obtener el valor de la caja de texto
-			var searchField = $('#search').val();
-			
-			var expression = new RegExp(searchField, "i");
-			
-			//lllamar data.json
-            
-            $.getJSON('data.json', function (data) {
-				//RECORRER ELEMTOS each() para recorrer listas de un mismo id:
-                $.each(data, function (key, value) {
-                    if (value.name.search(expression)!= -1 || value.location.search(expression)!= -1) {
-						//Añadir o insertar contenido al final del elemento seleccionado
-                        $('#result').append('<li class="list-group-item link-class"><img src="' + value.image + '" height="40" width="40" class="img-thumbnail" /> ' + value.name + ' | <span class="text-muted">' + value.location + '</span></li>');
-                    }
-                });
-            });
+
+const productos = [
+        {
+            "name": "Angel Lewis",
+            "image": 'img/camisa1.png',
+            "location": "Seattle, WA"
+		}
+	]
+
+     function imprimirProductos(productos) {
+        productos.forEach(element => {
+            let html = '<div class="col-md-4 text-center">';
+            html += '<div><h3>' + element.name + '</h3></div>'
+            //html += '<div><img class="img-fluid" src="' + element.image + '" /></div>';
+            html += '<div>' + element.location + '</div>'
+            html += '</div>';
+            $(html).appendTo('#contenedor-productos');
         });
-/*
-        $('#result').on('click', 'li', function () {
-            var click_text = $(this).text().split('|');
-			$('#search').val($.trim(click_text[0]));
-			
-			//// Limpiar datos de tabla y de pagination
-            $("#result").html('');
-		});
-*/
-    });
+    }
+
+    function buscar() {
+        const nombre = $('#nombre').val();
+        if (!nombre) {
+            imprimirProductos(productos);
+            return false;
+        }
+        const busqueda = productos.filter(element => {
+            if (element.name == nombre) {
+                return element;
+            }
+        });
+        $('#contenedor-productos').html('');
+        imprimirProductos(busqueda);
+    }
+
+    imprimirProductos(productos);
 </script>
