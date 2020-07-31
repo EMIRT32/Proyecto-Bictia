@@ -155,7 +155,7 @@ function obtenerDepartamentos() {
     source: nDepartamentos
   });
   
-  
+  console.log(data);
   console.log(departamentos);
   console.log(nDepartamentos);
   
@@ -181,8 +181,11 @@ function obtenerMunicipios() {
   
   
   console.log(municipios);
+ 
+
   
   
   });
 }
+
 
