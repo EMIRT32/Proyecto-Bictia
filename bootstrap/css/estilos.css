@@ -135,7 +135,8 @@ body{                                   /*tipo de letra body*/
 }
 
 .container-fluid{
-    padding-left: 15px;
+    padding-left: 0%!important;
+    padding-right: 0%!important;
     margin-left: auto;
 }
 
