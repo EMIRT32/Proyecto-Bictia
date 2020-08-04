@@ -211,9 +211,8 @@
 				</div>
 			</div><!-- /main -->
 	</div><!-- /container -->
-	<div>
-		
-	</div>
+	<div></div>
+	
 
 	<footer class="page-footer font-small mdb-color pt-4">
 
@@ -735,7 +734,7 @@ const productos = [
         productos.forEach(element => {
             let html = '<div class="col-md-4 text-center">';
             html += '<div><h3>' + element.name + '</h3></div>'
-            //html += '<div><img class="img-fluid" src="' + element.image + '" /></div>';
+            html += '<div><img class="img-fluid" src="' + element.image + '" /></div>';
             html += '<div>' + element.location + '</div>'
             html += '</div>';
             $(html).appendTo('#contenedor-productos');
