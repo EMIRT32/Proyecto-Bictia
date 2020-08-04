@@ -2,11 +2,8 @@
     
     min-height: 100vh;
   }
-  .header .navbar {
-    background-color: transparent !important;
-   
-  }
-  .menu-fixed {
+
+.menu-fixed {
 	position:fixed;
 	z-index:1000;
 	top:0;
