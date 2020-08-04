@@ -4,7 +4,7 @@ body{                                   /*tipo de letra body*/
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     font-weight: 400;
-    color: #1e1e1e;
+    color: #ffffff;
 }
 
 .modal-body{
@@ -20,7 +20,7 @@ body{                                   /*tipo de letra body*/
 
 
 .navbar-nav{
-    padding-left: 270px;
+    
     font-family: 'Lato',sans-serif;
     
 
@@ -123,6 +123,7 @@ body{                                   /*tipo de letra body*/
 
 .titulo{
     font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #000000;
 }
 
 .fondo{
