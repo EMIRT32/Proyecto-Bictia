@@ -13,9 +13,6 @@
 
 }
 
-.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
-    color: rgba(173, 0, 0, 0.9);
-}
 
 .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: .9rem;
@@ -23,9 +20,6 @@
     
 }
 
-.navbar-light .navbar-nav .nav-link {
-    color: rgba(250, 9, 9, 0.94);
-}
 
 .navbar-nav{
     font-size: 1.7rem;
@@ -56,9 +50,7 @@
     background-color: white;
 }
 
-.shadow{
-    color: red;
-}
+
 
 .btn-success {
     color: #fff;
@@ -84,4 +76,16 @@
 
 .container{
     background-color: black;
+}
+
+
+
+#carousel{
+    padding-left: 0%!important;
+    padding-right: 0%!important;
+}
+
+
+.container-fluid{
+    color: #fff;
 }
