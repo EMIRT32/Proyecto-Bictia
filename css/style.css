@@ -47,7 +47,7 @@ a{
     margin-right: -15px;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+   
 
 
     }
@@ -126,3 +126,28 @@ a{
     opacity: .9;
 
 }
+
+
+@media screen and (max-width: 480px) {
+    .columna-33  {
+     width: 100%;
+     padding-left: 0%;
+    padding-right: 0%;
+    padding-bottom: 0%;
+     
+    }
+  }
+  @media screen and (max-width: 480px) {
+     .cuadrado-perfecto {
+     padding-left: 0%;
+     padding-right: 0%;
+     padding-bottom: 0%;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .row {
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-bottom: 0%;
+   }
+ }
