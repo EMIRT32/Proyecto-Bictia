@@ -41,7 +41,7 @@ a{
 
                                 /*cajas y formas*/
                                 
-.row{
+/*.row{
     padding: 0 15px 0 15px;
     margin-left: -15px;
     margin-right: -15px;
@@ -50,7 +50,7 @@ a{
    
 
 
-    }
+    }*/
 
 
 .columna{
@@ -73,7 +73,7 @@ a{
 .cuadrado-perfecto{
     position: relative;
     width: 100%;
-    padding-bottom: 100%;
+    padding-bottom: 10%;
 }
 
 
