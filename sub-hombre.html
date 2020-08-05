@@ -67,151 +67,22 @@
 			</nav>
 		  </div>
 
-
-
-		<div class="container">
-
-		<br /><br />
-						
-
-						
-							<div aling="center">
-								<!-- TODO: Implementar onkeypress, onkeyup, onkeydown -->
-								<input type="text" class="form-control" id="nombre" />
-								<input type="button" class="btn btn-primary" value="Buscar" placeholder="Busca Ropa" onclick="buscar()" />
-							</div>
-							<div class="row" id="contenedor-productos">
-							</div>
-						
-
-						
-
-
-
-						<ul class="list-group" id="result"></ul>
-		<br />
+		  <div class="container">
+			<div>
+				<!-- TODO: Implementar onkeypress, onkeyup, onkeydown -->
+				<input type="text" class="form-control" id="nombre" />
+				<input type="button" class="btn btn-primary" value="Buscar" onclick="buscar()" />
+			</div>
 			
+			<div class="row" id="contenedor-productos">
+			</div>
+		</div>
+		
+		<button type="button" onclick="addCarrito()">       
+		</button>
 
-			<div class="main">
-
-                    <div id="hombre" class="cbp-vm-switcher cbp-vm-view-grid">
-								
-					<ul>
-						<li >
-							<a class="cbp-vm-image" href="#"><img src="img/camisa1.png" ></a>
-							<h3 class="cbp-vm-title">Silver beet</h3>
-							<div class="cbp-vm-price">$19.90</div>
-							<div class="cbp-vm-details">
-								Silver beet shallot wakame tomatillo salsify mung bean beetroot groundnut.
-							</div>
-							<a class="cbp-vm-icon cbp-vm-add" href="#">Add to cart</a>
-						</li>
-						<li>
-							<a class="cbp-vm-image" href="#"><img src="img/camisa2.png"></a>
-							<h3 class="cbp-vm-title">Wattle seed</h3>
-							<div class="cbp-vm-price">$22.90</div>
-							<div class="cbp-vm-details">
-								Wattle seed bunya nuts spring onion okra garlic bitterleaf zucchini.
-							</div>
-							<a class="cbp-vm-icon cbp-vm-add" href="#">Add to cart</a>
-						</li>
-						<li>
-							<a class="cbp-vm-image" href="#"><img src="img/camisa3.png"></a>
-							<h3 class="cbp-vm-title">Kohlrabi bok</h3>
-							<div class="cbp-vm-price">$5.90</div>
-							<div class="cbp-vm-details">
-								Kohlrabi bok choy broccoli rabe welsh onion spring onion tatsoi ricebean kombu chard.
-							</div>
-							<a class="cbp-vm-icon cbp-vm-add" href="#">Add to cart</a>
-						</li>
-						<li>
-							<a class="cbp-vm-image" href="#"><img src="img/pantalon4.png"></a>
-							<h3 class="cbp-vm-title">Melon sierra</h3>
-							<div class="cbp-vm-price">$12.90</div>
-							<div class="cbp-vm-details">
-								Melon sierra leone bologi carrot peanut salsify celery onion jícama summer purslane.
-							</div>
-							<a class="cbp-vm-icon cbp-vm-add" href="#">Add to cart</a>
-						</li>
-						<li>
-							<a class="cbp-vm-image" href="#"><img src="img/pantalon5.png"></a>
-							<h3 class="cbp-vm-title">Celery carrot</h3>
-							<div class="cbp-vm-price">$15.00</div>
-							<div class="cbp-vm-details">
-								Celery carrot napa cabbage wakame zucchini celery chard beetroot jícama sierra leone.
-							</div>
-							<a class="cbp-vm-icon cbp-vm-add" href="#">Add to cart</a>
-						</li>
-						<li>
-							<a class="cbp-vm-image" href="#"><img src="img/pantalon6.png"></a>
-							<h3 class="cbp-vm-title">Catsear</h3>
-							<div class="cbp-vm-price">$20.00</div>
-							<div class="cbp-vm-details">
-								Catsear cabbage tomato parsnip cucumber pea brussels sprout spring onion shallot swiss .
-							</div>
-							<a class="cbp-vm-icon cbp-vm-add" href="#">Add to cart</a>
-						</li>
-						<li>
-							<a class="cbp-vm-image" href="#"><img src="img/pantalon7.png"></a>
-							<h3 class="cbp-vm-title">Mung bean</h3>
-							<div class="cbp-vm-price">$88.00</div>
-							<div class="cbp-vm-details">
-								Mung bean taro chicory spinach komatsuna fennel.
-							</div>
-							<a class="cbp-vm-icon cbp-vm-add" href="#">Add to cart</a>
-						</li>
-						<li>
-							<a class="cbp-vm-image" href="#"><img src="img/pantalon8.png"></a>
-							<h3 class="cbp-vm-title">Epazote</h3>
-							<div class="cbp-vm-price">$34.90</div>
-							<div class="cbp-vm-details">
-								Epazote soko chickpea radicchio rutabaga desert raisin wattle seed coriander water.
-							</div>
-							<a class="cbp-vm-icon cbp-vm-add" href="#">Add to cart</a>
-						</li>
-						<li>
-							<a class="cbp-vm-image" href="#"><img src="img/pantalon9.png"></a>
-							<h3 class="cbp-vm-title">Tatsoi caulie</h3>
-							<div class="cbp-vm-price">$21.50</div>
-							<div class="cbp-vm-details">
-								Tatsoi caulie broccoli rabe bush tomato fava bean beetroot epazote salad grape.
-							</div>
-							<a class="cbp-vm-icon cbp-vm-add" href="#">Add to cart</a>
-						</li>
-						<li>
-							<a class="cbp-vm-image" href="#"><img src="img/jeans10.png"></a>
-							<h3 class="cbp-vm-title">Endive okra</h3>
-							<div class="cbp-vm-price">$18.50</div>
-							<div class="cbp-vm-details">
-								Endive okra chard desert raisin prairie turnip cucumber maize avocado.
-							</div>
-							<a class="cbp-vm-icon cbp-vm-add" href="#">Add to cart</a>
-						</li>
-						<li>
-							<a class="cbp-vm-image" href="#"><img src="img/pantaloneta11.png"></a>
-							<h3 class="cbp-vm-title">Bush tomato</h3>
-							<div class="cbp-vm-price">$9.00</div>
-							<div class="cbp-vm-details">
-								Bush tomato peanut shallot turnip prairie turnip gram desert raisin.
-							</div>
-							<a class="cbp-vm-icon cbp-vm-add" href="#">Add to cart</a>
-						</li>
-						<li>
-							<a class="cbp-vm-image" href="#"><img src="img/pantaloneta12.png"></a>
-							<h3 class="cbp-vm-title">Yarrow leek</h3>
-							<div class="cbp-vm-price">$22.50</div>
-							<div class="cbp-vm-details">
-								Yarrow leek cabbage amaranth onion salsify caulie kale desert raisin prairie turnip garlic.
-							</div>
-							<a class="cbp-vm-icon cbp-vm-add" href="#">Add to cart</a>
-						</li>
-					</ul>
-
-					
-				</div>
-			</div><!-- /main -->
-	</div><!-- /container -->
-	<div></div>
+		
+	
 	
 
 	<footer class="page-footer font-small mdb-color pt-4">
@@ -714,6 +585,8 @@
 
 		<script src="js/jquery-3.5.1.min.js"></script>
 		<script src="bootstrap/js/bootstrap.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	
 	</body>
     
@@ -721,22 +594,110 @@
 
 <script>
 
-
-const productos = [
+    const productos = [
         {
             "name": "Angel Lewis",
             "image": 'img/camisa1.png',
+            "location": "Seattle, WA",
+            "price":"$59"
+        },
+        {
+            "name": "Angel Lewis",
+            "image": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/3/000/0d4/2f7/07a3d35.jpg",
             "location": "Seattle, WA"
-		}
-	]
+        },
+        {
+            "name": "Justin Dean",
+            "image": "https://media.licdn.com/mpr/mpr/shrink_100_100/AAEAAQAAAAAAAAIMAAAAJGExNTE4OWY4LWU4ODMtNDA2ZS1iNWI1LWNkYmIyOWMyMGQ5Zg.jpg",
+            "location": "Muscatine, IA"
+        },
+        {
+            "name": "Nora Blake",
+            "image": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/2/005/0b8/118/387e091.jpg",
+            "location": "Seattle, WA"
+        },
+        {
+            "name": "Russell Fox",
+            "image": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/2/000/084/26e/2d9e05b.jpg",
+            "location": "Albuquerque, NM"
+        },
+        {
+            "name": "Daryl Bradley",
+            "image": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/3/000/042/0ad/197566e.jpg",
+            "location": "Buckeystown, MD"
+        },
+        {
+            "name": "Benjamin Gonzales",
+            "image": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/8/005/0b2/1c9/2a423c1.jpg",
+            "location": "Atlanta, GA"
+        },
+        {
+            "name": "Viola Francis",
+            "image": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAASJAAAAJGMyMTUzN2EyLTExY2ItNDZiNS1hMTY1LTI4NDA2NDMwZmFkNg.jpg",
+            "location": "Zanesville, OH"
+        },
+        {
+            "name": "Reginald Benson",
+            "image": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/1/000/10f/3cc/275a407.jpg",
+            "location": "Gilbert, AZ"
+        },
+        {
+            "name": "Glenda Ray",
+            "image": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/8/005/0ac/1ca/07c25a2.jpg",
+            "location": "Baltimore, MD"
+        },
+        {
+            "name": "Paula Vargas",
+            "image": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/5/005/03e/073/36a5c47.jpg",
+            "location": "Baltimore, MD"
+        },
+        {
+            "name": "Mark Armstrong",
+            "image": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/5/005/010/09b/39b122d.jpg",
+            "location": "Hallandale Beach, FL"
+        },
+        {
+            "name": "Jaime Campbell",
+            "image": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAATUAAAAJDJkY2Q1Mzk0LTI1YzItNDFhNy04ZmQ0LWY3NzZlZTZlNGVmYw.jpg",
+            "location": "Zanesville, OH"
+        },
+        {
+            "name": "Mike Beck",
+            "image": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/2/000/01c/0d4/2b69e7c.jpg",
+            "location": "Garner, NC"
+        },
+        {
+            "name": "Ann Lowe",
+            "image": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/7/000/1f6/019/29cd853.jpg",
+            "location": "Cabin John, MD"
+        },
+        {
+            "name": "Ryan Wolfe",
+            "image": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/1/000/0bf/335/05a57f6.jpg",
+            "location": "Los Angeles, CA"
+        },
+        {
+            "name": "Dwayne Gutierrez",
+            "image": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/3/000/29b/028/2426536.jpg",
+            "location": "San Jose, CA"
+        },
+        {
+            "name": "Bill Burke",
+            "image": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/7/000/1bc/12e/1423106.jpg",
+            "location": "Bakersfield, CA"
+        }
+    ]; 
 
-     function imprimirProductos(productos) {
+    function imprimirProductos(productos) {
         productos.forEach(element => {
             let html = '<div class="col-md-4 text-center">';
             html += '<div><h3>' + element.name + '</h3></div>'
             html += '<div><img class="img-fluid" src="' + element.image + '" /></div>';
-            html += '<div>' + element.location + '</div>'
+            html += '<div>' + element.location + '</div>';
+            html += '<div >'+ element.price + '</div>';
+            html += '<button type="button" onclick="addCarrito()">añadir al carrito </button>';
             html += '</div>';
+            
             $(html).appendTo('#contenedor-productos');
         });
     }
@@ -745,7 +706,7 @@ const productos = [
         const nombre = $('#nombre').val();
         if (!nombre) {
             imprimirProductos(productos);
-            return false;
+            return true;
         }
         const busqueda = productos.filter(element => {
             if (element.name == nombre) {
@@ -757,4 +718,5 @@ const productos = [
     }
 
     imprimirProductos(productos);
+
 </script>
