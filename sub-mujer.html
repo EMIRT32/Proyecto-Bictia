@@ -74,7 +74,8 @@
 		<div>
 			<!-- TODO: Implementar onkeypress, onkeyup, onkeydown -->
 			<input type="text" class="form-control" id="nombre" />
-			<input type="button" class="btn btn-primary" value="Buscar" onclick="buscar()" />
+			<!--<input type="button" class="btn btn-primary" value="Buscar" onclick="buscar()" />-->
+			<button type="button" class="btn btn-primary" value="Buscar" onclick="buscar()">buscar</button>
 		</div>
 
 		<div class="row" id="contenedor-productos">
@@ -86,12 +87,9 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-	<div >
-
-		<div class="row" id="productos">
-		</div>
+	<div>
 		<div>
-			<a class="btn btn-success btn-block" class="cbp-vm-icon cbp-vm-add" href="carritom.html">
+			<a class="btn btn-success btn-block" class="cbp-vm-add" href="carritom.html">
 				Ver carrito
 			</a>
 		</div>
@@ -664,63 +662,98 @@
 		const productos = [
 			{
 				id: 1,
-				imagen: '<img src="img/hombre/camisa1.png" alt="">',
+				imagen: './img/hombre/camisa1.png',
 				nombre: 'camisa',
 				precio: 10000,
-				descripcion: 'polilana'
+				descripcion: 'algodon 100%'
 			},
 			{
 				id: 2,
-				imagen: '<img src="img/hombre/camisa2.png">',
+				imagen: './img/hombre/camisa2.png',
 				nombre: 'camisa',
 				precio: 20000,
-				descripcion: 'algodon'
+				descripcion: 'poliester'
 			},
 			{
 				id: 3,
-				imagen: '<img src="img/hombre/camisa3.png">',
+				imagen: './img/hombre/camisa3.png',
 				nombre: 'camisa',
 				precio: 30000,
 				descripcion: 'polilana'
 			},
 			{
 				id: 4,
-				imagen: '<img src="img/mujer/2 camisa.jpg">',
+				imagen: './img/hombre/pantalon4.png',
 				nombre: 'pantalon',
 				precio: 50000,
-				descripcion: 'algodon'
+				descripcion: 'algodon 100%'
 			},
 			{
 				id: 5,
-				imagen: '<img src="img/mujer/2 camisa.jpg">',
+				imagen: './img/hombre/pantalon5.png',
 				nombre: 'pantalon',
 				precio: 50000,
-				descripcion: 'polilana'
+				descripcion: 'poliester'
 			},
 			{
 				id: 6,
-				imagen: '<img src="img/mujer/2 camisa.jpg">',
+				imagen: './img/hombre/pantalon6.png',
 				nombre: 'pantalon',
 				precio: 50000,
 				descripcion: 'polilana'
 			},
 			{
 				id: 7,
-				imagen: 'https://media-cdn.tripadvisor.com/media/photo-s/12/4f/c6/69/picada-aguardientera.jpg',
-				nombre: 'pijama',
+				imagen: './img/hombre/pantalon7.png',
+				nombre: 'pantaloneta',
+				precio: 50000,
+				descripcion: 'polilana'
+			},
+			{
+				id: 8,
+				imagen: './img/hombre/pantalon8.png',
+				nombre: 'pantalon',
+				precio: 50000,
+				descripcion: 'polilana'
+			},
+			{
+				id: 9,
+				imagen: './img/hombre/pantalon9.png',
+				nombre: 'pantalon',
+				precio: 50000,
+				descripcion: 'polilana'
+			},
+			{
+				id: 10,
+				imagen: './img/hombre/jeans10.png',
+				nombre: 'jeans',
+				precio: 50000,
+				descripcion: 'polilana'
+			},
+			{
+				id: 11,
+				imagen: './img/hombre/pantaloneta11.png',
+				nombre: 'pantaloneta',
+				precio: 50000,
+				descripcion: 'polilana'
+			},
+			{
+				id: 12,
+				imagen: './img/hombre/pantaloneta12.png',
+				nombre: 'pantaloneta',
 				precio: 50000,
 				descripcion: 'polilana'
 			}
 		];
 
 		$(document).ready(function () {
-			pintarProductos();
+			pintarProductos(productos);
 		});
 
-		function pintarProductos() {
+		function pintarProductos(productos) {
 			productos.forEach(producto => {
 				html = '<div class="col-md-4">';
-				html += '<div class="card">';
+				html += '<div class="card mb-2" >';
 				html += '<img class="img-fluid" src="' + producto.imagen + '" class="card-img-top" alt="...">';
 				html += '<div class="card-body">';
 				html += '<h5 class="card-title" style=" color: black;">' + producto.nombre + '</h5>';
@@ -729,7 +762,7 @@
 				html += '<div class="row">';
 				html += '<div class="col-md-6">';
 				html += '<select class="form-control" id="cantidadProducto' + producto.id + '">';
-				for (let i = 1; i <= 5; i++) {
+				for (let i = 1; i <=5; i++) {
 					html += '<option value="' + i + '">' + i + '</option>';
 				}
 				html += '</select>';
@@ -738,13 +771,13 @@
 				html += '<input type="hidden" id="imagenProducto' + producto.id + '" value="' + producto.imagen + '" />';
 				html += '</div>';
 				html += '<div class="col-md-6">';
-				html += '<button onclick="agregarCarrito(' + producto.id + ')" class="cbp-vm-icon cbp-vm-add" class="btn btn-primary btn-block">Agregar</button>';
+				html += '<button onclick="agregarCarrito(' + producto.id + ')"  class=" cbp-vm-add btn btn-primary btn-block">Agregar</button>';
 				html += '</div>';
 				html += '</div>';
 				html += '</div>';
 				html += '</div>';
 				html += '</div>';
-				$(html).appendTo('#productos');
+				$(html).appendTo('#contenedor-productos');
 			});
 		}
 
@@ -766,23 +799,24 @@
 
 
 		function buscar() {
+			$('#contenedor-productos').html('');
 			const nombre = $('#nombre').val();
 			if (!nombre) {
-				imprimirProductos(productos);
+				pintarProductos(productos);
 				return true;
 			}
 			const busqueda = productos.filter(element => {
-				if (element.name == nombre) {
+				if (element.nombre === nombre) {
 					return element;
 				}
 			});
-			$('#contenedor-productos').html('');
-			imprimirProductos(busqueda);
+			pintarProductos(busqueda);
 		}
-
-		imprimirProductos(productos);
 
 	</script>
 </body>
 
 </html>
+
+
+
