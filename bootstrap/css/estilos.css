@@ -100,9 +100,12 @@ body{                                   /*tipo de letra body*/
 }
 
 
-
+/*color formulario y footer*/
 .container{
     background-color: black;
+}
+.colorFormulario{
+    background-color: transparent !important;
 }
 
 .text-uppercase{
