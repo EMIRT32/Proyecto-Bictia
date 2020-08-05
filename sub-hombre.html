@@ -733,13 +733,7 @@ function agregarCarrito(contador) {
 
     function imprimirProductos(productos) {
         productos.forEach(element => {
-            let html = '<div class="col-md-4 text-center">';
-            html += '<div><h3>' + element.name + '</h3></div>'
-            html += '<div><img class="img-fluid" src="' + element.image + '" /></div>';
-           // html += '<div>' + element.location + '</div>';
-            html += '<div >'+ element.price + '</div>';
-            html += '<button type="button" class="cbp-vm-icon cbp-vm-add" onclick="addCarrito()">añadir al carrito </button>';
-            html += '</div>';
+            
             
             $(html).appendTo('#contenedor-productos');
         });
