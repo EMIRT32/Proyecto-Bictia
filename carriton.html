@@ -15,8 +15,8 @@
 
 <body>
 
-    <div class="container">
-        <table class="table table-bordered">
+    <div class="container justify-content-center">
+        <table class="table table-bordered justify-content-center ">
             <thead>
                 <th width="20%">Imagen</th>
                 <th>Nombre</th>
@@ -24,7 +24,7 @@
                 <th>Precio</th>
                 <th>Total</th>
             </thead>
-            <tbody id="detalleCarrito">
+            <tbody id="detalleCarrito" class="quitarpadding">
             </tbody>
         </table>
         <div>
@@ -62,7 +62,7 @@
             carrito = JSON.parse(carrito);
 
             if (!carrito || !carrito.length) {
-                let html = '<tr><td colspan="5">No hay productos en carrito</td></tr>';
+                let html = '<tr><td colspan="5" >No hay productos en carrito</td></tr>';
                 $('#detalleCarrito').html(html);
                 return;
             }

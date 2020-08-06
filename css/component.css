@@ -168,3 +168,9 @@
 	}
 }
 
+.quitarpadding{
+	padding: 0% !important;
+}
+.table td, .table th{
+	padding: 0% !important;
+}
