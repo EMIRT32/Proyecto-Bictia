@@ -7,6 +7,9 @@ body{                                   /*tipo de letra body*/
     color: #ffffff;
     
 }
+.textoMapa{
+    color: black !important;
+}
 
 .modal-body{
     color: #302f2f;
@@ -114,7 +117,7 @@ body{                                   /*tipo de letra body*/
 }
 
 .texto{
-    color: white !important; 
+    color:white !important; 
 }
 
 .bi-cart3{
@@ -153,8 +156,8 @@ body{                                   /*tipo de letra body*/
     padding: .8rem 3rem;
 }
 
-.texto{
-    color: white;
+.texto1{
+    color: white !important;
 }
 
 .fondo-texto{
