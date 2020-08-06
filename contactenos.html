@@ -72,14 +72,14 @@
 
 
   <!--Mapa de ubicación puntos de venta y usuario-->
-  <div class="container-lg ">
-    <div class="flex-row  ">
-      <div class="col-12 d-flex justify-content-center">
-        Nuestro puntos de venta
+  <div class=" textoMapa">
+    <div class=" ">
+      <div class="text-center titulo" >
+        <p> Nuestro puntos de venta </p>
       </div>
-      <div class="flex-row  ">
-        <div class="col-12 ">
-          <div class="container " id="map"></div>
+      <div class=" ">
+        <div class=" ">
+          <div class=" " id="map"></div>
         </div>
 
       </div>
@@ -87,7 +87,7 @@
   </div>
   <!--Formulario de contactenos-->
 
-  <div class="container colorFormulario" id="contact-form">
+  <div class="container colorFormulario textoMapa" id="contact-form" >
     <form class="needs-validation" novalidate>
       <div class="form-row">
         <div class="col-md-6 mb-3">
@@ -102,8 +102,8 @@
           </div>
 
         </div>
-        <div class="col-md-6 mb-3">
-          <label for="validationCustom02">Apellidos</label>
+        <div class="col-md-6 mb-3 textoMapa">
+          <label for="validationCustom02" >Apellidos</label>
           <input type="text" class="form-control" id="validationCustom02" placeholder="Apellidos" required>
           <div class="valid-feedback">
             Campo diligenciado.
@@ -171,7 +171,7 @@
           </div>
         </div>
         <div class="col-md-12 mb-3">
-          <label for="validationTextarea">Textarea</label>
+          <label for="validationTextarea">Mensaje</label>
           <textarea class="form-control" id="validationCustom07" placeholder="Deja tu mensaje aquí" v-model="message"
             required></textarea>
           <div class="invalid-feedback">
