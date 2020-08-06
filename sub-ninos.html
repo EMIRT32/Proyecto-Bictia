@@ -43,10 +43,10 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mr-auto">
 						<li class="nav-item active">
-							<a class="nav-link color_texto" href="">Inicio <span class="sr-only">(current)</span></a>
+							<a class="nav-link color_texto" href="index.html">Inicio <span class="sr-only">(current)</span></a>
 						</li>
 						<li class="nav-item ">
-							<a class="nav-link color_texto" href="">Nosotros</a>
+							<a class="nav-link color_texto" href="nosotros.html">Nosotros</a>
 						</li>
 						<li class="nav-item dropdown ">
 							<a class="nav-link dropdown-toggle color_texto" href="#" id="navbarDropdown" role="button"
@@ -54,8 +54,8 @@
 								Otras opciones
 							</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="#">Nuestros Productos </a>
-								<a class="dropdown-item" href="#">Contáctenos</a>
+								<a class="dropdown-item" href="servicio.html">Nuestros Productos </a>
+								<a class="dropdown-item" href="contactenos.html">Contáctenos</a>
 
 							</div>
 						</li>
@@ -75,9 +75,9 @@
 	<div >
 		<div>
 			<!-- TODO: Implementar onkeypress, onkeyup, onkeydown -->
-			<input type="text" class="form-control" id="nombre" />
+			<input type="text" class="form-control" id="nombre" placeholder="Buscar Productos"/>
 			<!--<input type="button" class="btn btn-primary" value="Buscar" onclick="buscar()" />-->
-			<button type="button" class="btn btn-primary" value="Buscar" onclick="buscar()">buscar</button>
+			<button type="button" class="cbp-vm-add btn btn-primary " value="Buscar" onclick="buscar()">buscar</button>
 		</div>
 
 		<div class="row" id="contenedor-productos">
@@ -89,13 +89,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-	<div>
-		<div>
-			<a class="btn btn-success btn-block" class="cbp-vm-add" href="carritom.html">
-				Ver carrito
-			</a>
-		</div>
-	</div>
+	
 
 	<footer class="page-footer font-small mdb-color pt-4">
 
@@ -816,6 +810,8 @@
 		}
 
 	</script>
+	<script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+	<script src="bootstrap/js/bootstrap.js"></script>
 </body>
 
 </html>

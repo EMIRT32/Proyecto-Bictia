@@ -24,7 +24,7 @@
 
 .cbp-vm-add {
 	color: #fff;
-	background: rgb(24, 5, 3);
+	background: rgb(0, 0, 0);
 	
 	border-radius: 2px;
 	
@@ -168,3 +168,9 @@
 	}
 }
 
+.quitarpadding{
+	padding: 0% !important;
+}
+.table td, .table th{
+	padding: 0% !important;
+}

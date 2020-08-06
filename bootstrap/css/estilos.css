@@ -28,6 +28,9 @@ body{                                   /*tipo de letra body*/
     
     color: #000000;
 }
+.quitarpadding{
+    padding: 0%;
+}
 
 
 
