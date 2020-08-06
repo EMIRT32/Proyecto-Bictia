@@ -136,7 +136,12 @@ body{                                   /*tipo de letra body*/
 
 .container-md{
     background-color: rgb(243, 243, 243);
+    padding-left: 0%!important;
+    padding-right: 0%!important;
+    margin-left: auto;
 }
+    
+
 
 .container-fluid{
     padding-left: 0%!important;
@@ -158,74 +163,47 @@ body{                                   /*tipo de letra body*/
 .remove-all-styles { all: revert; }
 
 p {
-    animation-duration: 3s;
-    animation-name: slidein;
+    display: inline-block;
+    margin: 0 0.5rem;
+  
+    animation: tada    ; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
   }
   
-  @keyframes slidein {
-    from {
-      margin-left: 100%;
-      width: 300%
-    }
-  
-    to {
-      margin-left: 0%;
-      width: 100%;
-    }
-  }
 
   #container-primero {
     width: 250px;
     margin: 0 auto;
     }
-    .ex2 img{
-    height: 160px;
-    width: 250px;
-    margin: 15px 0;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    transition: all 1s ease;
-    }
+    
     .ex2 img:hover {
-    height: 220px;
-    width: 450px;
-    margin-left: -50px;
-    }
+        display: inline-block;
+        margin: 0 0.5rem;
+      
+        animation: tada    ; /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 2s; /* don't forget to set a duration! */
+      }
 
     #container-segundo {
         width: 250px;
         margin: 0 auto;
         }
-        .ex2 img{
-        height: 160px;
-        width: 250px;
-        margin: 15px 0;
-        -webkit-transition: all 1s ease;
-        -moz-transition: all 1s ease;
-        -ms-transition: all 1s ease;
-        transition: all 1s ease;
-        }
+        
         .ex2 img:hover {
-        height: 220px;
-        width: 450px;
-        margin-left: -50px;
-        }
+            display: inline-block;
+            margin: 0 0.5rem;
+          
+            animation: tada    ; /* referring directly to the animation's @keyframe declaration */
+            animation-duration: 2s; /* don't forget to set a duration! */
+          }
 
         #container-tercero {
             width: 250px;
             margin: 0 auto;
             }
-            .ex2 img{
-            height: 160px;
-            width: 250px;
-            margin: 15px 0;
-            -webkit-transition: all 1s ease;
-            -moz-transition: all 1s ease;
-            -ms-transition: all 1s ease;
-            transition: all 1s ease;
-            }
+            
             .ex2 img:hover {
+<<<<<<< HEAD
             height: 220px;
             width: 450px;
             margin-left: -50px;
@@ -234,4 +212,32 @@ p {
             .menu{
                 color: white;
             }
+=======
+                display: inline-block;
+                margin: 0 0.5rem;
+              
+                animation: tada    ; /* referring directly to the animation's @keyframe declaration */
+                animation-duration: 2s; /* don't forget to set a duration! */
+              }
+
+
+              @media (max-width: 700px) { 
+
+                #container-primero {
+                    width: 250px !important;
+                    margin: 10px 50px !important;
+                    }
+
+                    #container-segundo {
+                        width: 250px !important;
+                        margin: 10px 50px !important;
+                        }
+                        #container-tercero {
+                            width: 250px !important;
+                            margin: 10px 50px !important;
+                            }
+
+
+               }
+>>>>>>> f81d2d771b96e14f7a5a04c5d43cc2ca09b256b8
  
