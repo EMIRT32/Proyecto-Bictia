@@ -5,6 +5,7 @@ body{                                   /*tipo de letra body*/
     font-size: 14px;
     font-weight: 400;
     color: #ffffff;
+    background-color: rgb(243, 243, 243);
     
 }
 
@@ -203,16 +204,6 @@ p {
             }
             
             .ex2 img:hover {
-<<<<<<< HEAD
-            height: 220px;
-            width: 450px;
-            margin-left: -50px;
-            }
-
-            .menu{
-                color: white;
-            }
-=======
                 display: inline-block;
                 margin: 0 0.5rem;
               
@@ -236,8 +227,10 @@ p {
                             width: 250px !important;
                             margin: 10px 50px !important;
                             }
+               }
 
+               .carrito{
+                background-color: rgb(243, 243, 243);
 
                }
->>>>>>> f81d2d771b96e14f7a5a04c5d43cc2ca09b256b8
  
